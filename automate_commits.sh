@@ -21,8 +21,8 @@ END_DATE_SEC=$(date -d "$END_DATE" +%s)
 CURRENT_DATE_SEC=$START_DATE_SEC
 
 while [ "$CURRENT_DATE_SEC" -le "$END_DATE_SEC" ]; do
-  # Generate a random number of commits for the day (8 to 15)
-  COMMIT_COUNT=$((RANDOM % 8 + 8))
+  # Generate a random number of commits for the day (5 to 15)
+  COMMIT_COUNT=$((RANDOM % 11 + 5))  # Random number between 5 and 15
 
   for i in $(seq 1 $COMMIT_COUNT); do
     # Generate a random time within the day
