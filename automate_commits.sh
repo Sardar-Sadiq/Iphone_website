@@ -32,11 +32,11 @@ while [ "$CURRENT_DATE_SEC" -le "$END_DATE_SEC" ]; do
     # Format the commit date
     COMMIT_DATE=$(date -d "@$COMMIT_TIMESTAMP" +"%Y-%m-%d %H:%M:%S")
 
-    # Update the README.md file with a unique entry
-    echo "Commit $i on $COMMIT_DATE" >> README.md
+    # Update the commit_log.txt file with a unique entry
+    echo "Commit $i on $COMMIT_DATE" >> commit_log.txt
 
     # Stage the file
-    git add README.md
+    git add commit_log.txt
 
     # Set the commit date and make the commit
     GIT_AUTHOR_DATE="$COMMIT_DATE" GIT_COMMITTER_DATE="$COMMIT_DATE" \
